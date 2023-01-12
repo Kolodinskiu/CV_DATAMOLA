@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2c2c2c;
+  height: 100%;
+  
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 50px;
+  background: #131519;
+  color: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+
+}
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 05px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover,
+.active {
+  background: #2c3e50;
+  transition: 0.6s;
+}
+
+.btn {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+.main {
+  padding-top:200px ;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-content: space-between;
+  justify-content: center;
+  align-items: stretch;
+  justify-items: center;
+}
+.main-foto {
+  padding: 0 50px 0 50px;
+  
+}
+.main-foto img {
+  max-width: 100%;
+  width: 500px;
+  
+}
+
+.main-information {
+  padding: 0 50px 0 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 100px; 
+  
+}
+
+.main-information-slides {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.slid {
+  flex:100%;
+  display: none;
+  opacity: 0.6;
+  max-width: 100%;
+  height: auto;
+  padding: 35px;
+  background-color: rgba(241, 245, 245, 0.255);
+  color: #fff;
+}
+.slid-list {
+  color: #fff;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+  
+  
+}
+.slid-list li {
+  margin-top: 40px;
+  list-style-type: none;
+}
+
+.slid-name {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 40px;
+}
+.slide-title{
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.block {
+  flex:100%;
+  display: block;
+  max-width: 100%;
+  
+  height: auto;
+  
+}
+.slide-btn {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btnRight {
+  width: 250px;
+  height: 50px;
+  display:inline-block;
+  padding: 5px;
+  font-size: 25px;
+  border:0.1em solid #FFFFFF;
+  border-radius:100px;
+  text-decoration:none;
+  font-weight:600;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  cursor: pointer;
+
+}
+.btnRight:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+  }
+
+
+@media (max-width: 1030px) {
+  .slid-list {
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+  
+  }
+  .slid {
+    padding: 15px;
+  }
+ 
+}
+
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 869px) {
+  .btn {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    flex-direction: column;
+    min-width: 300px;
+    height: 100vh;
+    background: #2c3e50;
+    top: 0;
+    right: -100%;
+    transition: all 0.9s;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10rem;
+  }
+
+  .navbar.active2 {
+    right: 0;
+    transition: 0.9s;
+  }
+
+  .navbar .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* margin: 25px; */
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.9rem;
+    margin: 15px;
+    padding: 0.5rem 15px;
+  }
+
+  .navbar a:hover {
+    background: #21293a;
+    color: #fff;
+  }
+  
+
+@media (max-width: 799px) {
+  .main {
+    padding-top: 100px;
+    grid-template-columns:auto;
+  }
+
+  .main-information {
+    
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  .slid-name {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    
+  }
+  .slide-title{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .main-foto img {
+    max-width: 100%;
+    width: 350px;
+   
+  }
+}
+}
